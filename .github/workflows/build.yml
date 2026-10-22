@@ -1070,6 +1070,12 @@ jobs:
           wget -q "https://raw.githubusercontent.com/Goldzxcbug/Droidspaces_Kernel_patch/refs/heads/main/NTsync/ntsync_base.patch"
           wget -q "https://raw.githubusercontent.com/Goldzxcbug/Droidspaces_Kernel_patch/refs/heads/main/NTsync/${NTSYNC_PATCH}.patch"
 
+          # 使用仓库内修正版补丁（修复 5.10.149 lockdep.h 的 Hunk #2）
+          if [ -f "$GITHUB_WORKSPACE/.github/patches/${NTSYNC_PATCH}.patch" ]; then
+            echo "使用仓库内修正版 NTSync 补丁: ${NTSYNC_PATCH}.patch"
+            cp "$GITHUB_WORKSPACE/.github/patches/${NTSYNC_PATCH}.patch" "${NTSYNC_PATCH}.patch"
+          fi
+
           patch -p1 < "ntsync_base.patch"
           patch -p1 < "${NTSYNC_PATCH}.patch"
 

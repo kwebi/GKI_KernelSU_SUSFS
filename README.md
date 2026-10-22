@@ -1,3 +1,8 @@
+<!-- marble-guide -->
+> **marble（Redmi Note 12 Turbo / POCO F5）Android 12 / 5.10.149 专用：**
+> [GitHub Actions 编译与刷机教程](docs/MARBLE-BUILD-GUIDE.md) ·
+> [已编译产物与匹配管理器 Release](https://github.com/kwebi/GKI_KernelSU_SUSFS/releases/tag/marble-5.10.149-2023-01-20261022)
+
 <div align="center">
 
 # GKI KernelSU SUSFS
